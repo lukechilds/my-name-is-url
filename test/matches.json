@@ -14,5 +14,45 @@
   {
     "description": "Url with no scheme",
     "url": "url.com"
+  },
+  {
+    "description": "Url with port number",
+    "url": "url.com:8080"
+  },
+  {
+    "description": "Url with trailing slash",
+    "url": "url.com/"
+  },
+  {
+    "description": "Url with portnumber and trailing slash",
+    "url": "url.com:8080/"
+  },
+  {
+    "description": "Url with slug",
+    "url": "url.com/slug"
+  },
+  {
+    "description": "Url with hash",
+    "url": "url.com/#hash"
+  },
+  {
+    "description": "Url with query string",
+    "url": "url.com/?foo"
+  },
+  {
+    "description": "Url with query string with value",
+    "url": "url.com/?foo=bar"
+  },
+  {
+    "description": "Url with query string with multiple values",
+    "url": "url.com/?foo=bar&hello=world"
+  },
+  {
+    "description": "Url with complex query string",
+    "url": "url.com/?foo[]=bar&foo[]=helloworld"
+  },
+  {
+    "description": "Url with url encoded string",
+    "url": "url.com/Test+url+encoding+with+symbols+!%40£%24%25^%26*()_%2B"
   }
 ]
