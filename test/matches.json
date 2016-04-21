@@ -1,3 +1,18 @@
 [
-  "url.com"
+  {
+    "description": "Url starting with http://",
+    "url": "http://url.com"
+  },
+  {
+    "description": "Url starting with https://",
+    "url": "https://url.com"
+  },
+  {
+    "description": "Url starting with //",
+    "url": "//url.com"
+  },
+  {
+    "description": "Url with no scheme",
+    "url": "url.com"
+  }
 ]

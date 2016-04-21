@@ -29,9 +29,9 @@ describe('Urls()', function() {
 
   describe('Should match', function() {
 
-    matches.forEach(function(url) {
-      it(url, function () {
-        expect(Urls(url).get()).to.deep.equal([url]);
+    matches.forEach(function(match) {
+      it(match.description, function () {
+        expect(Urls(match.url).get()).to.deep.equal([match.url]);
       });
     });
 
