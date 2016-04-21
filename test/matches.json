@@ -16,6 +16,10 @@
     "url": "url.com"
   },
   {
+    "description": "Url with gTLD",
+    "url": "url.website"
+  },
+  {
     "description": "Url with trailing slash",
     "url": "url.com/"
   },

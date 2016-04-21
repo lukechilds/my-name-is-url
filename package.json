@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "description": "Surprisingly accurate URL grabber",
   "main": "dist/my-name-is-url.js",
-  "dependencies": {},
+  "dependencies": {
+    "tlds": "^1.110.0"
+  },
   "devDependencies": {
     "babel-cli": "^6.7.5",
     "babel-plugin-add-module-exports": "^0.1.2",
