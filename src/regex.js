@@ -13,6 +13,6 @@ const optionalSlash = `(${escapeChar}/(${notWhitespaceCommaOrDot}*)?)?`;
 const endsWithButDontMatch = `(?=${WhitespaceCommaDotOrEndOfLine})`;
 
 // Build
-const regex = `(${hostname}|${ip})${optionalPortNumber}${optionalSlash}${endsWithButDontMatch}`;
+const regex = `(localhost|${hostname}|${ip})${optionalPortNumber}${optionalSlash}${endsWithButDontMatch}`;
 
 export default new RegExp(regex, 'gi');

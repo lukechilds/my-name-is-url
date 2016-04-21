@@ -36,6 +36,14 @@
     "url": "192.168.0.1/"
   },
   {
+    "description": "Localhost",
+    "url": "localhost"
+  },
+  {
+    "description": "Localhost with trailing slash",
+    "url": "localhost/"
+  },
+  {
     "description": "Url with slug",
     "url": "url.com/slug"
   },
