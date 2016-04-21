@@ -13,6 +13,6 @@
   },
   {
     "description": "Url with semicolon but no port number                       ",
-    "url": "url.come:"
+    "url": "url.com:"
   }
 ]
