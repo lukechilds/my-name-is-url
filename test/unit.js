@@ -5,6 +5,7 @@ var Parser = require('../dist/parser');
 var regex = require('../dist/regex');
 
 var matches = require('./matches.json');
+var nonMatches = require('./non-matches.json');
 
 describe('Urls()', function() {
 
@@ -32,6 +33,16 @@ describe('Urls()', function() {
     matches.forEach(function(match) {
       it(match.description, function () {
         expect(Urls(match.url).get()).to.deep.equal([match.url]);
+      });
+    });
+
+  });
+
+  describe('Should not match', function() {
+
+    nonMatches.forEach(function(nonMatch) {
+      it(nonMatch.description, function () {
+        expect(Urls(nonMatch.url).get()).to.deep.equal([]);
       });
     });
 
