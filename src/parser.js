@@ -20,9 +20,9 @@ export default class Urls {
 
   filter(cb) {
 
-    // Check we've got something we can parse
+    // Make sure we have a string
     if(typeof this.text !== 'string') {
-      return '';
+      this.text = '';
     }
 
     // Check callback is a funciton
