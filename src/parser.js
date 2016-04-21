@@ -8,6 +8,12 @@ export default class Urls {
   }
 
   get() {
+
+    // Make sure we have a string
+    if(typeof this.text !== 'string') {
+      this.text = '';
+    }
+
     return this.text.match(regex);
   }
 
