@@ -26,6 +26,10 @@ describe('Urls()', function() {
       expect(Urls('url.com').get()).to.be.instanceof(Array);
     });
 
+    it('Should match a url', function () {
+      expect(Urls('url.com').get()).to.deep.equal(['url.com']);
+    });
+
   });
 
   describe('.filter()', function() {
