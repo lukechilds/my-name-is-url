@@ -1,0 +1,46 @@
+{
+  "name": "my-name-is-url",
+  "version": "0.0.0",
+  "description": "Surprisingly accurate URL grabber",
+  "main": "dist/my-name-is-url.js",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.7.5",
+    "babel-plugin-add-module-exports": "^0.1.2",
+    "babel-preset-es2015": "^6.6.0",
+    "chai": "^3.5.0",
+    "eslint": "^2.8.0",
+    "mocha": "^2.4.5",
+    "pre-commit": "^1.1.2"
+  },
+  "scripts": {
+    "prebuild": "rm -rf dist",
+    "build": "babel -d dist src",
+    "pretest": "npm run build",
+    "test": "mocha test",
+    "lint": "eslint src",
+    "prepublish": "npm run build"
+  },
+  "pre-commit": [
+    "lint",
+    "test"
+  ],
+  "babel": {
+    "presets": [
+      "es2015"
+    ],
+    "plugins": [
+      "add-module-exports"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukechilds/my-name-is-url.git"
+  },
+  "author": "Luke Childs <lukechilds123@gmail.com> (http://lukechilds.co.uk)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lukechilds/my-name-is-url/issues"
+  },
+  "homepage": "https://github.com/lukechilds/my-name-is-url"
+}
