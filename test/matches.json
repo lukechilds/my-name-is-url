@@ -20,6 +20,14 @@
     "url": "url.website"
   },
   {
+    "description": "Url with .local TLD                                         ",
+    "url": "url.local"
+  },
+  {
+    "description": "Url with .dev TLD                                           ",
+    "url": "url.dev"
+  },
+  {
     "description": "Url with trailing slash                                     ",
     "url": "url.com/"
   },
