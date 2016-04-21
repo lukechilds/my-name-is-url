@@ -14,4 +14,15 @@ describe('Urls()', function() {
     expect(Urls.regex).to.equal(regex);
   });
 
+  describe('.get()', function() {
+
+    it('Should always return an array', function () {
+      expect(Urls().get()).to.be.instanceof(Array);
+      expect(Urls('').get()).to.be.instanceof(Array);
+      expect(Urls('no url').get()).to.be.instanceof(Array);
+      expect(Urls('url.com').get()).to.be.instanceof(Array);
+    });
+
+  });
+
 });
