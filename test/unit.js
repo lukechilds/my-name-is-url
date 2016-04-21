@@ -28,6 +28,20 @@ describe('Urls()', function() {
 
   });
 
+  describe('.filter()', function() {
+
+    it('Should throw error if filter callback is invalid', function () {
+      expect(function() { Urls().filter() }).to.throw(Error);
+    });
+
+    it('Should filter matching urls', function () {
+      expect(Urls('hello url.com world').filter(function(url) {
+        return '<url>' + url + '</url>';
+      })).to.equal('hello <url>url.com</url> world');
+    });
+
+  });
+
   describe('Should match', function() {
 
     matches.forEach(function(match) {
