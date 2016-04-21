@@ -14,7 +14,8 @@ export default class Urls {
       this.text = '';
     }
 
-    return this.text.match(regex);
+    // Always return array
+    return this.text.match(regex) || [];
   }
 
 }
