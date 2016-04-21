@@ -16,16 +16,24 @@
     "url": "url.com"
   },
   {
-    "description": "Url with port number",
-    "url": "url.com:8080"
-  },
-  {
     "description": "Url with trailing slash",
     "url": "url.com/"
   },
   {
+    "description": "Url with port number",
+    "url": "url.com:8080"
+  },
+  {
     "description": "Url with portnumber and trailing slash",
     "url": "url.com:8080/"
+  },
+  {
+    "description": "IP address",
+    "url": "192.168.0.1"
+  },
+  {
+    "description": "IP address with trailing slash",
+    "url": "192.168.0.1/"
   },
   {
     "description": "Url with slug",
