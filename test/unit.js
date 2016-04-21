@@ -49,7 +49,7 @@ describe('Urls()', function() {
   describe('Should match', function() {
 
     matches.forEach(function(match) {
-      it(match.description, function () {
+      it(match.description + ' -> ' + match.url, function () {
         expect(Urls(match.url).get()).to.deep.equal([match.url]);
       });
     });
@@ -59,7 +59,7 @@ describe('Urls()', function() {
   describe('Should not match', function() {
 
     nonMatches.forEach(function(nonMatch) {
-      it(nonMatch.description, function () {
+      it(nonMatch.description + ' -> ' + nonMatch.url, function () {
         expect(Urls(nonMatch.url).get()).to.deep.equal([]);
       });
     });
