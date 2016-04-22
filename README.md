@@ -16,3 +16,42 @@ or
 ```shell
 $ jspm install npm:my-name-is-url
 ```
+
+## Usage
+Import the module
+
+#### CommonJS
+```js
+var Urls = require('my-name-is-url');
+```
+
+#### ES6
+```js
+import Urls from 'my-name-is-url';
+```
+
+### Regex
+If you just wanna do your own thing the regex used internally is helpfully exposed
+```js
+const UrlRegex = Urls.regex;
+```
+
+### Get Urls
+The `get()` method returns an array of urls in a piece of text
+
+```js
+const text = 'Check out these sites: site1.com,site2.com,site3.com';
+
+Urls(text).get(); // Returns:
+['site1.com', 'site2.com', 'site3.com']
+```
+
+### Filter Urls
+The `filter()` method runs a filter on each url in a piece of text
+
+```js
+const text = 'My GitHub profile: https://github.com/lukechilds';
+
+Urls(text).filter(url => `<a href="${url}">${url}</a>`); // Returns:
+'My GitHub profile: <a href="https://github.com/lukechilds">https://github.com/lukechilds</a>'
+```
