@@ -6,6 +6,15 @@ var regex = require('../dist/regex');
 
 var matches = require('./matches.json');
 var nonMatches = require('./non-matches.json');
+function formatMatchDescription(match) {
+  var descriptionLength = 50;
+  var description = match.description;
+  if(description.length < descriptionLength) {
+    description += Array(descriptionLength - description.length + 1).join(' ');
+  }
+  description += '-> ' + match.url;
+  return description;
+}
 
 describe('Urls()', function() {
 
@@ -49,7 +58,7 @@ describe('Urls()', function() {
   describe('Should match', function() {
 
     matches.forEach(function(match) {
-      it(match.description + ' -> ' + match.url, function () {
+      it(formatMatchDescription(match), function () {
         expect(Urls(match.url).get()).to.deep.equal([match.url]);
       });
     });
@@ -59,7 +68,7 @@ describe('Urls()', function() {
   describe('Should not match', function() {
 
     nonMatches.forEach(function(nonMatch) {
-      it(nonMatch.description + ' -> ' + nonMatch.url, function () {
+      it(formatMatchDescription(nonMatch), function () {
         expect(Urls(nonMatch.url).get()).to.deep.equal([]);
       });
     });

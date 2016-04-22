@@ -1,86 +1,86 @@
 [
   {
-    "description": "Url starting with http://                                   ",
+    "description": "Url starting with http://",
     "url": "http://url.com"
   },
   {
-    "description": "Url starting with https://                                  ",
+    "description": "Url starting with https://",
     "url": "https://url.com"
   },
   {
-    "description": "Url starting with //                                        ",
+    "description": "Url starting with //",
     "url": "//url.com"
   },
   {
-    "description": "Url with no scheme                                          ",
+    "description": "Url with no scheme",
     "url": "url.com"
   },
   {
-    "description": "Url with gTLD                                               ",
+    "description": "Url with gTLD",
     "url": "url.website"
   },
   {
-    "description": "Url with .local TLD                                         ",
+    "description": "Url with .local TLD",
     "url": "url.local"
   },
   {
-    "description": "Url with .dev TLD                                           ",
+    "description": "Url with .dev TLD",
     "url": "url.dev"
   },
   {
-    "description": "Url with trailing slash                                     ",
+    "description": "Url with trailing slash",
     "url": "url.com/"
   },
   {
-    "description": "Url with port number                                        ",
+    "description": "Url with port number",
     "url": "url.com:8080"
   },
   {
-    "description": "Url with portnumber and trailing slash                      ",
+    "description": "Url with portnumber and trailing slash",
     "url": "url.com:8080/"
   },
   {
-    "description": "IP address                                                  ",
+    "description": "IP address",
     "url": "192.168.0.1"
   },
   {
-    "description": "IP address with trailing slash                              ",
+    "description": "IP address with trailing slash",
     "url": "192.168.0.1/"
   },
   {
-    "description": "Localhost                                                   ",
+    "description": "Localhost",
     "url": "localhost"
   },
   {
-    "description": "Localhost with trailing slash                               ",
+    "description": "Localhost with trailing slash",
     "url": "localhost/"
   },
   {
-    "description": "Url with slug                                               ",
+    "description": "Url with slug",
     "url": "url.com/slug"
   },
   {
-    "description": "Url with hash                                               ",
+    "description": "Url with hash",
     "url": "url.com/#hash"
   },
   {
-    "description": "Url with query string                                       ",
+    "description": "Url with query string",
     "url": "url.com/?foo"
   },
   {
-    "description": "Url with query string with value                            ",
+    "description": "Url with query string with value",
     "url": "url.com/?foo=bar"
   },
   {
-    "description": "Url with query string with multiple values                  ",
+    "description": "Url with query string with multiple values",
     "url": "url.com/?foo=bar&hello=world"
   },
   {
-    "description": "Url with complex query string                               ",
+    "description": "Url with complex query string",
     "url": "url.com/?foo[]=bar&foo[]=helloworld"
   },
   {
-    "description": "Url with url encoded string                                 ",
+    "description": "Url with url encoded string",
     "url": "url.com/Test+url+encoding+with+symbols+!%40£%24%25^%26*()_%2B"
   }
 ]

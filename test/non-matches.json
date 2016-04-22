@@ -1,18 +1,18 @@
 [
   {
-    "description": "Dot seperated string without a valid TLD                    ",
+    "description": "Dot seperated string without a valid TLD",
     "url": "url.notatld"
   },
   {
-    "description": "Url with extra chars after a valid TLD                      ",
+    "description": "Url with extra chars after a valid TLD",
     "url": "url.comextra"
   },
   {
-    "description": "Url without dot                                             ",
+    "description": "Url without dot",
     "url": "urlcom"
   },
   {
-    "description": "Url with semicolon but no port number                       ",
+    "description": "Url with semicolon but no port number",
     "url": "url.com:"
   }
 ]
