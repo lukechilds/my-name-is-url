@@ -1,0 +1,17 @@
+[
+  {
+    "description": "Comma separated urls",
+    "text": "Check out these sites: site1.com,site2.com,site3.com",
+    "matches": ["site1.com", "site2.com", "site3.com"]
+  },
+  {
+    "description": "Urls at the end of a sentance",
+    "text": "Check out this site: url.com.",
+    "matches": ["url.com"]
+  },
+  {
+    "description": "Urls before line break",
+    "text": "Check out this site: url.com\n",
+    "matches": ["url.com"]
+  }
+]

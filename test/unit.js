@@ -4,6 +4,7 @@ var Urls = require('../dist/my-name-is-url');
 var Parser = require('../dist/parser');
 var regex = require('../dist/regex');
 
+var grabbable = require('./grabbable.json');
 var matches = require('./matches.json');
 var nonMatches = require('./non-matches.json');
 function formatMatchDescription(match) {
@@ -51,6 +52,16 @@ describe('Urls()', function() {
       expect(Urls('hello url.com world').filter(function(url) {
         return '<url>' + url + '</url>';
       })).to.equal('hello <url>url.com</url> world');
+    });
+
+  });
+
+  describe('Should grab', function() {
+
+    grabbable.forEach(function(grab) {
+      it(grab.description, function () {
+        expect(Urls(grab.text).get()).to.deep.equal(grab.matches);
+      });
     });
 
   });
