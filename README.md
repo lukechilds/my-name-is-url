@@ -1,5 +1,5 @@
 # my-name-is-url [![Build Status](https://travis-ci.org/lukechilds/my-name-is-url.svg?branch=master)](https://travis-ci.org/lukechilds/my-name-is-url)
-Intelligently finds many different url formats in a string. Works in browser and node.
+Intelligently finds many different url formats in a string. For the browser and node.
 
 ## About
 In a nutshell, `my-name-is-url` is an Intelligent parser that searches a string of text for urls. The url spec is so vague that almost anything _could_ be a url. The regular expression used in `my-name-is-url` tries to match patterns likely to represent a url in a sentence rather than matching the actual url spec.
