@@ -37,7 +37,7 @@ const UrlRegex = Urls.regex;
 ```
 
 ### Get Urls
-The `get()` method returns an array of urls in a piece of text
+The `get()` method returns an array of urls in a string
 
 ```js
 const text = 'Check out these sites: site1.com,site2.com,site3.com';
@@ -47,7 +47,7 @@ Urls(text).get(); // Returns:
 ```
 
 ### Filter Urls
-The `filter()` method runs a filter on each url in a piece of text
+The `filter()` method runs a filter on each url in a string
 
 ```js
 const text = 'My GitHub profile: https://github.com/lukechilds';
