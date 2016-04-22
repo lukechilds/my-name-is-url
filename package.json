@@ -2,6 +2,19 @@
   "name": "my-name-is-url",
   "version": "0.0.0",
   "description": "Intelligent URL parser",
+  "keywords": [
+    "urls",
+    "url",
+    "uri",
+    "get",
+    "extract",
+    "find",
+    "filter",
+    "scrape",
+    "text",
+    "string",
+    "browser"
+  ],
   "main": "dist/my-name-is-url.js",
   "dependencies": {
     "tlds": "^1.110.0"
