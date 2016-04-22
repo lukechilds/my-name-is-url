@@ -61,3 +61,6 @@ Urls(text).filter(url => `<a href="${url}">${url}</a>`); // Returns:
 > **Pro tip**
 >
 > You can get a parser instance by calling `Urls()` or `new Url`, whichever you prefer.
+
+## License
+MIT © Luke Childs
