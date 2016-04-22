@@ -6,7 +6,7 @@ In a nutshell, `my-name-is-url` is an Intelligent parser that searches a string 
 
 > ❗️**Important note**
 >
-> If you're trying to parse a url into sections (scheme,host) or check a url is valid this module isn't for you. This module is intended to search text for urls.
+> If you're trying to parse a url into sections (scheme,host) or check a url is valid this module isn't for you. This module is intended to find urls in a string.
 
 ## Install
 ```shell
