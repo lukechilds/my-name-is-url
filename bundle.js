@@ -153,8 +153,8 @@ System.register('src/main.js', ['npm:my-name-is-url@1.0.0.js'], function (_expor
   var Urls, input, output;
 
   function checkUrls() {
-    var parsedUrls = Urls(input.innerText).filter(function (url) {
-      return '<span>' + url + '</span>';
+    var parsedUrls = Urls(input.innerHTML).filter(function (url) {
+      return '<span class="url">' + url + '</span>';
     });
     output.innerHTML = parsedUrls;
   }
