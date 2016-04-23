@@ -47,7 +47,7 @@ With complex query string                -> url.com/?foo[]=bar&foo[]=helloworld
 With url encoded string                  -> url.com/Test+url+encoding+with+symbols+!%40£%24%25^%26*()_%2B
 ```
 
-Whilst excluding patterns you probably don't wan't to match:
+Whilst excluding patterns you probably don't want to match:
 
 ```
 Dot seperated string without a valid TLD -> url.notatld
