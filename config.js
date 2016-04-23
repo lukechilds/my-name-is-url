@@ -15,6 +15,8 @@ System.config({
   bundles: {
     "./bundle.js": [
       "src/main.js",
+      "npm:escape-html@1.0.3.js",
+      "npm:escape-html@1.0.3/index.js",
       "npm:my-name-is-url@1.0.0.js",
       "npm:my-name-is-url@1.0.0/dist/my-name-is-url.js",
       "npm:my-name-is-url@1.0.0/dist/regex.js",

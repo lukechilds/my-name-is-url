@@ -147,13 +147,71 @@ System.registerDynamic("npm:my-name-is-url@1.0.0.js", ["npm:my-name-is-url@1.0.0
   return module.exports;
 });
 
-System.register('src/main.js', ['npm:my-name-is-url@1.0.0.js'], function (_export) {
+System.registerDynamic("npm:escape-html@1.0.3/index.js", [], true, function($__require, exports, module) {
+  "use strict";
+  ;
+  var define,
+      global = this,
+      GLOBAL = this;
+  var matchHtmlRegExp = /["'&<>]/;
+  module.exports = escapeHtml;
+  function escapeHtml(string) {
+    var str = '' + string;
+    var match = matchHtmlRegExp.exec(str);
+    if (!match) {
+      return str;
+    }
+    var escape;
+    var html = '';
+    var index = 0;
+    var lastIndex = 0;
+    for (index = match.index; index < str.length; index++) {
+      switch (str.charCodeAt(index)) {
+        case 34:
+          escape = '&quot;';
+          break;
+        case 38:
+          escape = '&amp;';
+          break;
+        case 39:
+          escape = '&#39;';
+          break;
+        case 60:
+          escape = '&lt;';
+          break;
+        case 62:
+          escape = '&gt;';
+          break;
+        default:
+          continue;
+      }
+      if (lastIndex !== index) {
+        html += str.substring(lastIndex, index);
+      }
+      lastIndex = index + 1;
+      html += escape;
+    }
+    return lastIndex !== index ? html + str.substring(lastIndex, index) : html;
+  }
+  return module.exports;
+});
+
+System.registerDynamic("npm:escape-html@1.0.3.js", ["npm:escape-html@1.0.3/index.js"], true, function($__require, exports, module) {
+  ;
+  var define,
+      global = this,
+      GLOBAL = this;
+  module.exports = $__require('npm:escape-html@1.0.3/index.js');
+  return module.exports;
+});
+
+System.register('src/main.js', ['npm:my-name-is-url@1.0.0.js', 'npm:escape-html@1.0.3.js'], function (_export) {
   'use strict';
 
-  var Urls, input, output;
+  var Urls, escape, input, output;
 
   function checkUrls() {
-    var parsedUrls = Urls(input.innerHTML).filter(function (url) {
+    var parsedUrls = Urls(escape(input.value)).filter(function (url) {
       return '<span class="url">' + url + '</span>';
     });
     output.innerHTML = parsedUrls;
@@ -161,6 +219,8 @@ System.register('src/main.js', ['npm:my-name-is-url@1.0.0.js'], function (_expor
   return {
     setters: [function (_npmMyNameIsUrl100Js) {
       Urls = _npmMyNameIsUrl100Js['default'];
+    }, function (_npmEscapeHtml103Js) {
+      escape = _npmEscapeHtml103Js['default'];
     }],
     execute: function () {
       input = document.querySelector('.input');
