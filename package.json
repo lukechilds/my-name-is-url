@@ -37,7 +37,7 @@
     "pretest": "npm run build",
     "test": "nyc mocha test",
     "lint": "eslint src",
-    "coverage": "nyc report --reporter=text-lcov | coveralls && nyc report --reporter=text-lcov | codeclimate-test-reporter",
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov && cat coverage.lcov | coveralls && cat coverage.lcov | codeclimate-test-reporter",
     "prepublish": "npm run build"
   },
   "pre-commit": [
