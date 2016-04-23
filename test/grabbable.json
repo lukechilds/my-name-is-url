@@ -5,7 +5,7 @@
     "matches": ["site1.com", "site2.com", "site3.com"]
   },
   {
-    "description": "Urls at the end of a sentance",
+    "description": "Urls at the end of a sentence",
     "text": "Check out this site: url.com.",
     "matches": ["url.com"]
   },
