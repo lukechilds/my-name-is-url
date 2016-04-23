@@ -36,7 +36,7 @@
     "url": "url.com:8080"
   },
   {
-    "description": "Url with portnumber and trailing slash",
+    "description": "Url with port number and trailing slash",
     "url": "url.com:8080/"
   },
   {
