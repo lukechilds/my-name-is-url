@@ -1,4 +1,4 @@
-# my-name-is-url [![Build Status](https://travis-ci.org/lukechilds/my-name-is-url.svg?branch=master)](https://travis-ci.org/lukechilds/my-name-is-url)
+# my-name-is-url [![Build Status](https://travis-ci.org/lukechilds/my-name-is-url.svg?branch=master)](https://travis-ci.org/lukechilds/my-name-is-url) [![Coverage Status](https://coveralls.io/repos/github/lukechilds/my-name-is-url/badge.svg?branch=master)](https://coveralls.io/github/lukechilds/my-name-is-url?branch=master)
 Intelligently finds many different url formats in a string. For the browser and node.
 
 ## About
