@@ -5,7 +5,7 @@
   },
   {
     "description": "Url with extra chars after a valid TLD",
-    "url": "url.comextra"
+    "url": "url.comextrachars"
   },
   {
     "description": "Url without dot",
