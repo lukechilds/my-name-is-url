@@ -4,7 +4,7 @@ Intelligently finds many different url formats in a string. For the browser and 
 
 ## About
 
-In a nutshell, `my-name-is-url` is an intelligent parser that searches a string of text for urls. The url spec is so vague that almost anything _could_ be a url. The regular expression used in `my-name-is-url` tries to match patterns likely to represent a url in a sentence rather than matching the actual url spec.
+In a nutshell, `my-name-is-url` is an intelligent parser that searches a string of text for urls. The url spec is so vague that many strings _could_ be a url so matching the spec directly results in a lot of false positives. The regular expression used in `my-name-is-url` tries to match patterns likely to represent a url in a sentence rather than matching the actual url spec.
 
 > ❗️**Important note**
 >
