@@ -6,7 +6,5 @@ engines:
     config:
       languages:
       - javascript
-  nodesecurity:
-    enabled: true
   markdownlint:
     enabled: true
