@@ -11,4 +11,4 @@ body {
 }
 
 .output { color: transparent }
-.output span { background: red; }
+.output .url { background: red; }
