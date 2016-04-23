@@ -24,15 +24,15 @@ jspm install npm:my-name-is-url
 
 ## Usage
 
-Import the module
+### Importing
 
-#### CommonJS
+CommonJS
 
 ```js
 var Urls = require('my-name-is-url');
 ```
 
-#### ES6
+ES6
 
 ```js
 import Urls from 'my-name-is-url';
