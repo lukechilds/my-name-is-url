@@ -10,5 +10,15 @@ body {
   height: 100%;
 }
 
+.output,
+.input {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: normal;
+  font-family: Helvetica;
+}
+
+.input { background: transparent; }
 .output { color: transparent }
 .output .url { background: red; }
