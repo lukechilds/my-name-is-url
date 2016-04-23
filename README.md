@@ -53,9 +53,8 @@ The `get()` method returns an array of urls in a string
 ```js
 const text = 'Check out these sites: site1.com,site2.com,site3.com';
 
-Urls(text).get(); // Returns:
-
-['site1.com', 'site2.com', 'site3.com']
+Urls(text).get();
+// ['site1.com', 'site2.com', 'site3.com']
 ```
 
 ### Filter Urls
@@ -65,9 +64,8 @@ The `filter()` method runs a filter on each url in a string
 ```js
 const text = 'My GitHub profile: https://github.com/lukechilds';
 
-Urls(text).filter(url => `<a href="${url}">${url}</a>`); // Returns:
-
-'My GitHub profile: <a href="https://github.com/lukechilds">https://github.com/lukechilds</a>'
+Urls(text).filter(url => `<a href="${url}">${url}</a>`);
+// 'My GitHub profile: <a href="https://github.com/lukechilds">https://github.com/lukechilds</a>'
 ```
 
 > **Pro tip**
