@@ -8,3 +8,7 @@ engines:
       - javascript
   markdownlint:
     enabled: true
+    checks:
+      # Line length
+      MD013:
+        enabled: false
