@@ -21,6 +21,7 @@
   },
   "jspm": {
     "dependencies": {
+      "escape-html": "npm:escape-html@^1.0.3",
       "my-name-is-url": "npm:my-name-is-url@^1.0.0"
     },
     "devDependencies": {
