@@ -4,6 +4,7 @@
   "description": "Demo site for my-name-is-url module",
   "main": "index.html",
   "scripts": {
+    "bundle": "jspm bundle src/main bundle.js --inject",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
