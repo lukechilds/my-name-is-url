@@ -68,7 +68,7 @@ Urls(text).filter(url => `<a href="${url}">${url}</a>`);
 // 'My GitHub profile: <a href="https://github.com/lukechilds">https://github.com/lukechilds</a>'
 ```
 
-> **Pro tip**
+> 👍 **Pro tip**
 >
 > You can get a parser instance by calling `Urls()` or `new Urls`, whichever you prefer.
 
