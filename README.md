@@ -13,13 +13,13 @@ In a nutshell, `my-name-is-url` is an intelligent parser that searches a string 
 ## Install
 
 ```shell
-$ npm install --save my-name-is-url
+npm install --save my-name-is-url
 ```
 
 or
 
 ```shell
-$ jspm install npm:my-name-is-url
+jspm install npm:my-name-is-url
 ```
 
 ## Usage
