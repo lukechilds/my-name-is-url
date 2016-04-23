@@ -2,8 +2,13 @@ body {
   margin: 0;
 }
 
-.test-text {
+.text-container,
+.output,
+.input {
   position: absolute;
   width: 100%;
   height: 100%;
 }
+
+.output { color: transparent }
+.output span { background: red; }

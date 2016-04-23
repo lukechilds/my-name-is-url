@@ -1,10 +1,11 @@
 import Urls from 'my-name-is-url';
 
-const testText = document.querySelector('.test-text');
+const input = document.querySelector('.input');
+const output = document.querySelector('.output');
 
 function checkUrls() {
-  const urls = Urls(testText.innerText).get();
-  console.log(urls);
+  const parsedUrls = Urls(input.innerText).filter(url => `<span>${url}</span>`);
+  output.innerHTML = parsedUrls;
 }
 checkUrls();
-testText.addEventListener('input', checkUrls);
+input.addEventListener('input', checkUrls);
