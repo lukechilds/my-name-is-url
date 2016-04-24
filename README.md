@@ -24,7 +24,16 @@ jspm install npm:my-name-is-url
 
 ## Matches
 
-`my-name-is-url` matches many different url patterns:
+`my-name-is-url` doesn't choke on punctuation, these urls are successfully found regardless of the commas and period:
+
+```js
+const text = 'Check out these sites: site1.com,site2.com,site3.com.';
+
+Urls(text).get();
+// ['site1.com', 'site2.com', 'site3.com']
+```
+
+many different url patterns are matched:
 
 ```
 With http://                             -> http://url.com
@@ -47,22 +56,13 @@ With complex query string                -> url.com/?foo[]=bar&foo[]=helloworld
 With url encoded string                  -> url.com/Test+url+encoding+with+symbols+!%40£%24%25^%26*()_%2B
 ```
 
-Whilst excluding patterns you probably don't want to match:
+whilst excluding patterns you probably don't want:
 
 ```
 Dot seperated string without a valid TLD -> url.notatld
 Url with extra chars after a valid TLD   -> url.comextrachars
 Url without dot                          -> urlcom
 Url with semicolon but no port number    -> url.com:
-```
-
-It also doesn't choke on punctuation, these urls are successfully found regardless of the commas and period:
-
-```js
-const text = 'Check out these sites: site1.com,site2.com,site3.com.';
-
-Urls(text).get();
-// ['site1.com', 'site2.com', 'site3.com']
 ```
 
 ## Usage
