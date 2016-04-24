@@ -20,5 +20,8 @@ body {
 }
 
 .input { background: transparent; }
-.output { color: transparent }
+.output {
+  color: transparent;
+  white-space: pre-wrap;
+}
 .output .url { background: red; }
