@@ -2,12 +2,14 @@ body {
   margin: 0;
 }
 
-.text-container,
-.output,
-.input {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+.scroller {
+  width: 500px;
+  height: 500px;
+  overflow: scroll;
+}
+
+.text-container {
+  position: relative;
 }
 
 .output,
@@ -19,7 +21,16 @@ body {
   font-family: Helvetica;
 }
 
-.input { background: transparent; }
+.input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  overflow: hidden;
+
+}
 .output {
   color: transparent;
   white-space: pre-wrap;
