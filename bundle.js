@@ -214,7 +214,7 @@ System.register('src/main.js', ['npm:my-name-is-url@1.0.0.js', 'npm:escape-html@
     var parsedUrls = Urls(escape(input.value)).filter(function (url) {
       return '<span class="url">' + url + '</span>';
     });
-    output.innerHTML = parsedUrls;
+    output.innerHTML = parsedUrls + ' ';
   }
   return {
     setters: [function (_npmMyNameIsUrl100Js) {
