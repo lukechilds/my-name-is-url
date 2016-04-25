@@ -6,6 +6,7 @@ body {
   width: 500px;
   height: 500px;
   overflow: scroll;
+  border: #ccc 1px solid;
 }
 
 .text-container {
