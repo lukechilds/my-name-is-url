@@ -6,7 +6,7 @@ const output = document.querySelector('.output');
 
 function checkUrls() {
   const parsedUrls = Urls(escape(input.value)).filter(url => `<span class="url">${url}</span>`);
-  output.innerHTML = parsedUrls;
+  output.innerHTML = `${parsedUrls} `;
 }
 checkUrls();
 input.addEventListener('input', checkUrls);
