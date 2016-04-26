@@ -1,5 +1,4 @@
 System.config({
-  baseURL: "/",
   defaultJSExtensions: true,
   transpiler: "babel",
   babelOptions: {
@@ -13,7 +12,7 @@ System.config({
     "npm:*": "jspm_packages/npm/*"
   },
   bundles: {
-    "./bundle.js": [
+    "bundle.js": [
       "src/main.js",
       "npm:escape-html@1.0.3.js",
       "npm:escape-html@1.0.3/index.js",
