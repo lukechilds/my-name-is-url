@@ -13,5 +13,20 @@
     "description": "Urls before line break",
     "text": "Check out this site: url.com\n",
     "matches": ["url.com"]
+  },
+  {
+    "description": "Url in HTML",
+    "text": "<span>url.com</span>",
+    "matches": ["url.com"]
+  },
+  {
+    "description": "Url with scheme in HTML",
+    "text": "<span>http://url.com</span>",
+    "matches": ["http://url.com"]
+  },
+  {
+    "description": "IP in HTML",
+    "text": "<span>192.168.0.11</span>",
+    "matches": ["192.168.0.11"]
   }
 ]

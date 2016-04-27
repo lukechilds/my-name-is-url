@@ -3,18 +3,18 @@ import tlds from 'tlds';
 // Reusables
 const validTlds = tlds.concat(['local', 'dev']).join('|');
 const escapeChar = `\\`;
-const notWhitespaceOrComma = `[^${escapeChar}s,]`;
+const notWhitespaceHTMLOrComma = `[^${escapeChar}s<>,]`;
 const notWhitespaceCommaOrDot = `[^${escapeChar}s,.]`;
-const WhitespaceCommaDotOrEndOfLine = `[${escapeChar}s,.]|$`;
+const WhitespaceCommaDotHTMLOrEndOfLine = `[${escapeChar}s,.<>]|$`;
 const number = `[0-9]`;
 
 // Sections
 const optionalScheme = `((https?:)?//)?`;
-const hostname = `(${notWhitespaceOrComma}+${escapeChar}.(${validTlds}))`;
+const hostname = `(${notWhitespaceHTMLOrComma}+${escapeChar}.(${validTlds}))`;
 const ip = `(${number}{1,3}${escapeChar}.){3}${number}{1,3}`;
 const optionalPortNumber = `(:${number}+)?`;
 const optionalSlash = `(${escapeChar}/(${notWhitespaceCommaOrDot}*)?)?`;
-const endsWithButDontMatch = `(?=${WhitespaceCommaDotOrEndOfLine})`;
+const endsWithButDontMatch = `(?=${WhitespaceCommaDotHTMLOrEndOfLine})`;
 
 // Build
 const regex = `${optionalScheme}(localhost|${hostname}|${ip})${optionalPortNumber}${optionalSlash}${endsWithButDontMatch}`;
