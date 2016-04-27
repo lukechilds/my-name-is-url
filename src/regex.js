@@ -9,7 +9,7 @@ const WhitespaceCommaDotOrEndOfLine = `[${escapeChar}s,.]|$`;
 const number = `[0-9]`;
 
 // Sections
-const hostname = `(${notWhitespaceOrComma}*${escapeChar}.(${validTlds}))`;
+const hostname = `(${notWhitespaceOrComma}+${escapeChar}.(${validTlds}))`;
 const ip = `(${number}{1,3}${escapeChar}.){3}${number}{1,3}`;
 const optionalPortNumber = `(:${number}+)?`;
 const optionalSlash = `(${escapeChar}/(${notWhitespaceCommaOrDot}*)?)?`;

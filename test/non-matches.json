@@ -14,5 +14,9 @@
   {
     "description": "Url with semicolon but no port number",
     "url": "url.com:"
+  },
+  {
+    "description": "TLD with no hostname",
+    "url": ".com"
   }
 ]
