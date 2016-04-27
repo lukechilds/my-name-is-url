@@ -28,5 +28,20 @@
     "description": "IP in HTML",
     "text": "<span>192.168.0.11</span>",
     "matches": ["192.168.0.11"]
+  },
+  {
+    "description": "Url in double quotes",
+    "text": "\"url.com\"",
+    "matches": ["url.com"]
+  },
+  {
+    "description": "Url with scheme in double quotes",
+    "text": "\"http://url.com\"",
+    "matches": ["http://url.com"]
+  },
+  {
+    "description": "IP in double quotes",
+    "text": "\"192.168.0.11\"",
+    "matches": ["192.168.0.11"]
   }
 ]
