@@ -43,5 +43,15 @@
     "description": "IP in double quotes",
     "text": "\"192.168.0.11\"",
     "matches": ["192.168.0.11"]
+  },
+  {
+    "description": "Url after double quote in hostname",
+    "text": "double\"quote.com",
+    "matches": ["quote.com"]
+  },
+  {
+    "description": "Url before double quote in path",
+    "text": "url.com/double\"quote",
+    "matches": ["url.com/double"]
   }
 ]
