@@ -36,3 +36,6 @@ checkInput();
 
 // Run every time content is changed
 input.addEventListener('input', checkInput);
+
+// Focus input
+input.focus()
