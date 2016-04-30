@@ -83,3 +83,16 @@ h2 {
   white-space: pre-wrap;
 }
 .output .url { background: #FF8585; }
+
+@media only screen and (max-width: 600px)  {
+
+  .content {
+    flex-direction: column;
+  }
+
+  .description,
+  .text-tester {
+    width: auto;
+  }
+
+}
