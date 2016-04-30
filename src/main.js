@@ -6,10 +6,9 @@ const input = document.querySelector('.input');
 const output = document.querySelector('.output');
 
 // Check for data in url hash
-const initialText = location.hash.substring(1);
-if(initialText) {
-  input.value = decodeURIComponent(initialText);
-}
+const defaultText = 'Text to parse for urls.com';
+const hashText = decodeURIComponent(location.hash.substring(1));
+input.value = hashText || defaultText;
 
 // Check text input for urls
 function checkInput() {
