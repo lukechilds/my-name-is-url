@@ -24,6 +24,7 @@ body {
   border: none;
   outline: none;
   resize: none;
+  word-wrap: break-word;
 }
 
 .input {
