@@ -276,6 +276,9 @@ System.register('src/main.js', ['npm:my-name-is-url@1.1.0.js', 'npm:escape-html@
 
       // Run every time content is changed
       input.addEventListener('input', checkInput);
+
+      // Focus input
+      input.focus();
     }
   };
 });
