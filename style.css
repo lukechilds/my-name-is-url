@@ -7,6 +7,15 @@ body {
   color: #333;
 }
 
+a {
+  color: #4078c0;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 .header {
   padding: 0.8em 1em;
   background: #eee;
@@ -32,10 +41,6 @@ body {
 
 h2 {
   margin-top: 0;
-}
-
-a {
-  color: #4078c0;
 }
 
 .text-tester {
