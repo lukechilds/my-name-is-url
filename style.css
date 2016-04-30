@@ -55,7 +55,6 @@ h2 {
   width: 100%;
   height: 100%;
   overflow: scroll;
-  border: #ccc 1px solid;
 }
 
 .text-container {
@@ -108,6 +107,7 @@ h2 {
 
   .text-tester {
     width: 100%;
+    border: #eaeaea 1px solid;
   }
 
 }
