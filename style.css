@@ -2,6 +2,16 @@ body {
   margin: 0;
 }
 
+.header {
+  padding: 0.4em 1em;
+  background: #eee;
+  border-bottom: 1px solid #ddd;
+}
+
+.star {
+  float: right;
+}
+
 .scroller {
   width: 500px;
   height: 500px;
