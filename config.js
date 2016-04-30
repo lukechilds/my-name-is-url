@@ -14,14 +14,16 @@ System.config({
   bundles: {
     "bundle.js": [
       "src/main.js",
+      "npm:strict-uri-encode@1.1.0.js",
+      "npm:strict-uri-encode@1.1.0/index.js",
       "npm:escape-html@1.0.3.js",
       "npm:escape-html@1.0.3/index.js",
-      "npm:my-name-is-url@1.0.0.js",
-      "npm:my-name-is-url@1.0.0/dist/my-name-is-url.js",
-      "npm:my-name-is-url@1.0.0/dist/regex.js",
+      "npm:my-name-is-url@1.1.0.js",
+      "npm:my-name-is-url@1.1.0/dist/my-name-is-url.js",
+      "npm:my-name-is-url@1.1.0/dist/regex.js",
       "npm:tlds@1.111.0.js",
       "npm:tlds@1.111.0/index.js",
-      "npm:my-name-is-url@1.0.0/dist/parser.js"
+      "npm:my-name-is-url@1.1.0/dist/parser.js"
     ]
   },
 
