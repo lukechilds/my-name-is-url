@@ -16,6 +16,11 @@ a:hover {
   text-decoration: underline;
 }
 
+h1,
+h2 {
+  margin-top: 0;
+}
+
 .header {
   padding: 0.8em 1em;
   background: #eee;
@@ -37,10 +42,6 @@ a:hover {
   width: 50%;
   padding: 1em;
   box-sizing: border-box;
-}
-
-h2 {
-  margin-top: 0;
 }
 
 .text-tester {
