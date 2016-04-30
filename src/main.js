@@ -14,7 +14,17 @@ input.value = hashText || defaultText;
 function checkInput() {
 
   // Check input for urls
-  const parsedUrls = Urls(escape(input.value)).filter(url => `<span class="url">${url}</span>`);
+  let parsedUrls = Urls(input.value).filter(url => `!urlMatchStart${url}!urlMatchEnd`);
+
+  // Escape all HTML chars
+  parsedUrls = escape(parsedUrls);
+
+  // Wrap matched urls in spans
+  parsedUrls = parsedUrls
+    .replace(/!urlMatchStart/g, '<span class="url">')
+    .replace(/!urlMatchEnd/g, '</span>');
+
+  // Add parsed urls to output
   output.innerHTML = `${parsedUrls} `;
 
   // Save current state in url hash
