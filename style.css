@@ -15,6 +15,7 @@ body {
 
 .star {
   float: right;
+  height: 20px;
 }
 
 .content {
