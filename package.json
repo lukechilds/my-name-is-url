@@ -23,7 +23,8 @@
   "jspm": {
     "dependencies": {
       "escape-html": "npm:escape-html@^1.0.3",
-      "my-name-is-url": "npm:my-name-is-url@^1.0.0"
+      "my-name-is-url": "npm:my-name-is-url@^1.0.0",
+      "strict-uri-encode": "npm:strict-uri-encode@^1.1.0"
     },
     "devDependencies": {
       "babel": "npm:babel-core@^5.8.24",
