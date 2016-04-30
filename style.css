@@ -18,9 +18,9 @@ body {
 .input {
   margin: 0;
   padding: 0;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: normal;
-  font-family: Helvetica;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
   border: none;
   outline: none;
   resize: none;
