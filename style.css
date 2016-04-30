@@ -75,10 +75,10 @@ h2 {
   height: 100%;
   background: transparent;
   overflow: hidden;
-
+  color: inherit;
 }
 .output {
   color: transparent;
   white-space: pre-wrap;
 }
-.output .url { background: red; }
+.output .url { background: #B7DBFF; }
