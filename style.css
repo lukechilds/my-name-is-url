@@ -44,8 +44,16 @@ h2 {
   box-sizing: border-box;
 }
 
-.text-tester {
+.text-tester-container {
+  position: relative;
   width: 50%;
+  overflow: hidden;
+}
+
+.text-tester {
+  position: absolute;
+  width: 100%;
+  height: 100%;
   overflow: scroll;
   border: #ccc 1px solid;
 }
@@ -90,9 +98,16 @@ h2 {
     flex-direction: column;
   }
 
-  .description,
-  .text-tester {
+  .description {
     width: auto;
+  }
+
+  .text-tester-container {
+    position: static;
+  }
+
+  .text-tester {
+    width: 100%;
   }
 
 }
