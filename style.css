@@ -1,6 +1,10 @@
 body {
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #333;
 }
 
 .header {
@@ -13,9 +17,28 @@ body {
   float: right;
 }
 
-.scroller {
-  width: 500px;
-  height: 500px;
+.content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.description {
+  width: 50%;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+a {
+  color: #4078c0;
+}
+
+.text-tester {
+  width: 50%;
   overflow: scroll;
   border: #ccc 1px solid;
 }
