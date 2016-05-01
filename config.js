@@ -32,7 +32,7 @@ System.config({
     "babel-runtime": "npm:babel-runtime@5.8.38",
     "core-js": "npm:core-js@1.2.6",
     "escape-html": "npm:escape-html@1.0.3",
-    "my-name-is-url": "npm:my-name-is-url@1.1.0",
+    "my-name-is-url": "npm:my-name-is-url@1.2.0",
     "strict-uri-encode": "npm:strict-uri-encode@1.1.0",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
@@ -61,7 +61,7 @@ System.config({
     "npm:inherits@2.0.1": {
       "util": "github:jspm/nodelibs-util@0.1.0"
     },
-    "npm:my-name-is-url@1.1.0": {
+    "npm:my-name-is-url@1.2.0": {
       "systemjs-json": "github:systemjs/plugin-json@0.1.2",
       "tlds": "npm:tlds@1.111.0"
     },
