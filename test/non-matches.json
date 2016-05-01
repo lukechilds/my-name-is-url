@@ -18,5 +18,9 @@
   {
     "description": "TLD with no hostname",
     "url": ".com"
+  },
+  {
+    "description": "TLD with no hostname but two dots",
+    "url": "..com"
   }
 ]
