@@ -252,7 +252,7 @@ System.register('src/main.js', ['npm:my-name-is-url@1.1.0.js', 'npm:escape-html@
     output.innerHTML = parsedUrls + ' ';
 
     // Save current state in url hash
-    location.hash = strictUriEncode(input.value);
+    location.replace('#' + strictUriEncode(input.value));
   }
 
   // Run on page load
