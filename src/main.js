@@ -28,7 +28,7 @@ function checkInput() {
   output.innerHTML = `${parsedUrls} `;
 
   // Save current state in url hash
-  location.hash = strictUriEncode(input.value);
+  location.replace(`#${strictUriEncode(input.value)}`);
 }
 
 // Run on page load
