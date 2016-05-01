@@ -1,4 +1,4 @@
-System.registerDynamic("npm:my-name-is-url@1.1.0/dist/parser.js", ["npm:my-name-is-url@1.1.0/dist/regex.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:my-name-is-url@1.2.0/dist/parser.js", ["npm:my-name-is-url@1.2.0/dist/regex.js"], true, function($__require, exports, module) {
   "use strict";
   ;
   var define,
@@ -24,7 +24,7 @@ System.registerDynamic("npm:my-name-is-url@1.1.0/dist/parser.js", ["npm:my-name-
       return Constructor;
     };
   }();
-  var _regex = $__require('npm:my-name-is-url@1.1.0/dist/regex.js');
+  var _regex = $__require('npm:my-name-is-url@1.2.0/dist/regex.js');
   var _regex2 = _interopRequireDefault(_regex);
   function _interopRequireDefault(obj) {
     return obj && obj.__esModule ? obj : {default: obj};
@@ -85,7 +85,7 @@ System.registerDynamic("npm:tlds@1.111.0.js", ["npm:tlds@1.111.0/index.js"], tru
   return module.exports;
 });
 
-System.registerDynamic("npm:my-name-is-url@1.1.0/dist/regex.js", ["npm:tlds@1.111.0.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:my-name-is-url@1.2.0/dist/regex.js", ["npm:tlds@1.111.0.js"], true, function($__require, exports, module) {
   "use strict";
   ;
   var define,
@@ -99,32 +99,33 @@ System.registerDynamic("npm:my-name-is-url@1.1.0/dist/regex.js", ["npm:tlds@1.11
   }
   var validTlds = _tlds2.default.concat(['local', 'dev']).join('|');
   var escapeChar = '\\';
-  var notWhitespaceHTMLDoubleQuoteOrComma = '[^' + escapeChar + 's<>",]';
+  var notWhitespaceHTMLDoubleQuoteDotOrComma = '[^' + escapeChar + 's<>".,]';
   var notWhitespaceCommaDoubleQuoteOrDot = '[^' + escapeChar + 's,".]';
   var WhitespaceCommaDotHTMLDoubleQuoteOrEOL = '[' + escapeChar + 's,.<>"]|$';
   var number = '[0-9]';
   var optionalScheme = '((https?:)?//)?';
-  var hostname = '(' + notWhitespaceHTMLDoubleQuoteOrComma + '+' + escapeChar + '.(' + validTlds + '))';
+  var optionalSubdomain = '(' + notWhitespaceHTMLDoubleQuoteDotOrComma + '+' + escapeChar + '.)?';
+  var hostname = '(' + notWhitespaceHTMLDoubleQuoteDotOrComma + '+' + escapeChar + '.(' + validTlds + '))';
   var ip = '(' + number + '{1,3}' + escapeChar + '.){3}' + number + '{1,3}';
   var optionalPortNumber = '(:' + number + '+)?';
   var optionalSlash = '(' + escapeChar + '/(' + notWhitespaceCommaDoubleQuoteOrDot + '*)?)?';
   var endsWithButDontMatch = '(?=' + WhitespaceCommaDotHTMLDoubleQuoteOrEOL + ')';
-  var regex = optionalScheme + '(localhost|' + hostname + '|' + ip + ')' + optionalPortNumber + optionalSlash + endsWithButDontMatch;
+  var regex = '' + optionalScheme + optionalSubdomain + '(localhost|' + hostname + '|' + ip + ')' + optionalPortNumber + optionalSlash + endsWithButDontMatch;
   exports.default = new RegExp(regex, 'gi');
   module.exports = exports['default'];
   return module.exports;
 });
 
-System.registerDynamic("npm:my-name-is-url@1.1.0/dist/my-name-is-url.js", ["npm:my-name-is-url@1.1.0/dist/parser.js", "npm:my-name-is-url@1.1.0/dist/regex.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:my-name-is-url@1.2.0/dist/my-name-is-url.js", ["npm:my-name-is-url@1.2.0/dist/parser.js", "npm:my-name-is-url@1.2.0/dist/regex.js"], true, function($__require, exports, module) {
   "use strict";
   ;
   var define,
       global = this,
       GLOBAL = this;
   Object.defineProperty(exports, "__esModule", {value: true});
-  var _parser = $__require('npm:my-name-is-url@1.1.0/dist/parser.js');
+  var _parser = $__require('npm:my-name-is-url@1.2.0/dist/parser.js');
   var _parser2 = _interopRequireDefault(_parser);
-  var _regex = $__require('npm:my-name-is-url@1.1.0/dist/regex.js');
+  var _regex = $__require('npm:my-name-is-url@1.2.0/dist/regex.js');
   var _regex2 = _interopRequireDefault(_regex);
   function _interopRequireDefault(obj) {
     return obj && obj.__esModule ? obj : {default: obj};
@@ -139,12 +140,12 @@ System.registerDynamic("npm:my-name-is-url@1.1.0/dist/my-name-is-url.js", ["npm:
   return module.exports;
 });
 
-System.registerDynamic("npm:my-name-is-url@1.1.0.js", ["npm:my-name-is-url@1.1.0/dist/my-name-is-url.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:my-name-is-url@1.2.0.js", ["npm:my-name-is-url@1.2.0/dist/my-name-is-url.js"], true, function($__require, exports, module) {
   ;
   var define,
       global = this,
       GLOBAL = this;
-  module.exports = $__require('npm:my-name-is-url@1.1.0/dist/my-name-is-url.js');
+  module.exports = $__require('npm:my-name-is-url@1.2.0/dist/my-name-is-url.js');
   return module.exports;
 });
 
@@ -229,7 +230,7 @@ System.registerDynamic("npm:strict-uri-encode@1.1.0.js", ["npm:strict-uri-encode
   return module.exports;
 });
 
-System.register('src/main.js', ['npm:my-name-is-url@1.1.0.js', 'npm:escape-html@1.0.3.js', 'npm:strict-uri-encode@1.1.0.js'], function (_export) {
+System.register('src/main.js', ['npm:my-name-is-url@1.2.0.js', 'npm:escape-html@1.0.3.js', 'npm:strict-uri-encode@1.1.0.js'], function (_export) {
   'use strict';
 
   var Urls, escape, strictUriEncode, input, output, defaultText, hashText;
@@ -257,8 +258,8 @@ System.register('src/main.js', ['npm:my-name-is-url@1.1.0.js', 'npm:escape-html@
 
   // Run on page load
   return {
-    setters: [function (_npmMyNameIsUrl110Js) {
-      Urls = _npmMyNameIsUrl110Js['default'];
+    setters: [function (_npmMyNameIsUrl120Js) {
+      Urls = _npmMyNameIsUrl120Js['default'];
     }, function (_npmEscapeHtml103Js) {
       escape = _npmEscapeHtml103Js['default'];
     }, function (_npmStrictUriEncode110Js) {
