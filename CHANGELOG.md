@@ -25,7 +25,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Match scheme for any pattern
 - Make urls in HTML tags grabbable
 - Make urls in double quotes grabbable
--	Ignore double quotes in urls
+- Ignore double quotes in urls
 - Add change log
 
 ## [1.0.0] - 2016-04-22
