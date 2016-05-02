@@ -11,7 +11,7 @@ const endingChars = `[${escapeChar}s<>".,]|$`;
 
 // Sections
 const optionalScheme = `((https?:)?//)?`;
-const hostname = `((${alphabetical}{1}[${alphabetical}-]*[^-]${dot})+(${validTlds}))`;
+const hostname = `((${alphabetical}{1}([${alphabetical}-]*([^-]|${alphabetical}))?${dot})+(${validTlds}))`;
 const ip = `(${number}{1,3}${dot}){3}${number}{1,3}`;
 const optionalPortNumber = `(:${number}+)?`;
 const optionalSlash = `(${escapeChar}/(${notWhitespaceCommaDoubleQuoteOrDot}*)?)?`;
