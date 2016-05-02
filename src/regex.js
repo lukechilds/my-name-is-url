@@ -7,7 +7,7 @@ const notWhitespaceCommaDoubleQuoteOrDot = `[^${escapeChar}s,".]`;
 const dot = `${escapeChar}.`;
 const alphabetical = `${escapeChar}w`;
 const number = `[0-9]`;
-const endingChars = `[${escapeChar}s<>".,]|$`;
+const endingChars = `${dot}?([${escapeChar}s<>",]|$)`;
 
 // Sections
 const optionalScheme = `((https?:)?//)?`;

@@ -26,5 +26,9 @@
   {
     "description": "Hyphon at end of hostname",
     "url": "foo-.com"
+  },
+  {
+    "description": "Dot seperated strings that don't end with a TLD",
+    "url": "url.com.notatld"
   }
 ]

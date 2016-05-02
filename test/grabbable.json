@@ -10,6 +10,16 @@
     "matches": ["url.com"]
   },
   {
+    "description": "Urls at the end of a sentence with newline",
+    "text": "Check out this site: url.com.\nNewline",
+    "matches": ["url.com"]
+  },
+  {
+    "description": "Urls at the end of a sentence with space",
+    "text": "Check out this site: url.com. ",
+    "matches": ["url.com"]
+  },
+  {
     "description": "Urls before line break",
     "text": "Check out this site: url.com\n",
     "matches": ["url.com"]
