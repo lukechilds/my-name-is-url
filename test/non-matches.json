@@ -30,5 +30,13 @@
   {
     "description": "Dot seperated strings that don't end with a TLD",
     "url": "url.com.notatld"
+  },
+  {
+    "description": "Backslash instead of hostname",
+    "url": "\\.com"
+  },
+  {
+    "description": "Double backslash instead of hostname",
+    "url": "\\\\.com"
   }
 ]
