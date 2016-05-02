@@ -1,7 +1,7 @@
 import regex from './regex';
 
-// Factory function to return parser instance
-export default class Urls {
+// Parser class
+export default class Parser {
 
   constructor(text = null) {
     this.text = text;
