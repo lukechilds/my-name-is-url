@@ -1,6 +1,6 @@
 # my-name-is-url [![Build Status](https://travis-ci.org/lukechilds/my-name-is-url.svg?branch=master)](https://travis-ci.org/lukechilds/my-name-is-url) [![Coverage Status](https://coveralls.io/repos/github/lukechilds/my-name-is-url/badge.svg?branch=master)](https://coveralls.io/github/lukechilds/my-name-is-url?branch=master) [![Issue Count](https://codeclimate.com/github/lukechilds/my-name-is-url/badges/issue_count.svg)](https://codeclimate.com/github/lukechilds/my-name-is-url)
 
-Intelligently finds many different url formats in a string. For the browser and node. [Here, have a play](http://lukechilds.github.io/my-name-is-url).
+Intelligently recognises many different url formats in a string. For the browser and node. [Here, have a play](http://lukechilds.github.io/my-name-is-url).
 
 ## About
 
