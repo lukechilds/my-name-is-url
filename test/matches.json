@@ -100,6 +100,10 @@
     "url": "//localhost"
   },
   {
+    "description": "Hostname with hyphon",
+    "url": "hyphon-url.com"
+  },
+  {
     "description": "Url with slug",
     "url": "url.com/slug"
   },

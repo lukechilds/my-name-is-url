@@ -22,5 +22,9 @@
   {
     "description": "TLD with no hostname but two dots",
     "url": "..com"
+  },
+  {
+    "description": "Hyphon at end of hostname",
+    "url": "foo-.com"
   }
 ]
