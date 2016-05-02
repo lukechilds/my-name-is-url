@@ -3,6 +3,11 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.3.1] - 2016-05-02
+
+- Fix hostname/subdomain matching
+- Some tweaks to the readme
+
 ## [1.3.0] - 2016-05-02
 
 - Stricter checking of hostnames
@@ -32,6 +37,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - First release
 
+[1.3.1]: https://github.com/lukechilds/my-name-is-url/compare/v1.3.0...v1.3.1
 [1.3.0]: https://github.com/lukechilds/my-name-is-url/compare/v1.2.0...v1.3.0
 [1.2.0]: https://github.com/lukechilds/my-name-is-url/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/lukechilds/my-name-is-url/compare/v1.0.0...v1.1.0
