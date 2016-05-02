@@ -38,5 +38,9 @@
   {
     "description": "Double backslash instead of hostname",
     "url": "\\\\.com"
+  },
+  {
+    "description": "Hostname ending with space",
+    "url": "url .com"
   }
 ]
