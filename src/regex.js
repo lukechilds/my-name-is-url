@@ -10,7 +10,7 @@ const number = `[0-9]`;
 const endingChars = `${dot}?([${escapeChar}s<>",]|$)`;
 
 // Sections
-const optionalScheme = `((https?:)?//)?`;
+const optionalScheme = `((${alphabetical}+:)?//)?`;
 const hostname = `((${alphabetical}{1}([${alphabetical}-]*([^-]|${alphabetical}))?${dot})+(${validTlds}))`;
 const ip = `(${number}{1,3}${dot}){3}${number}{1,3}`;
 const optionalPortNumber = `(:${number}+)?`;

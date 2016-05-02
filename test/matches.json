@@ -12,6 +12,10 @@
     "url": "//url.com"
   },
   {
+    "description": "Url starting with custom scheme",
+    "url": "custom://url.com"
+  },
+  {
     "description": "Url with no scheme",
     "url": "url.com"
   },
