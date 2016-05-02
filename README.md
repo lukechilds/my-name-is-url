@@ -53,10 +53,10 @@ const UrlRegex = Urls.regex;
 The `get()` method returns an array of urls in a string
 
 ```js
-const text = 'Check out these sites: site1.com,site2.com,site3.com';
+const text = 'Check out these sites: foobar.com,//foo.com,http://bar.com.';
 
 Urls(text).get();
-// ['site1.com', 'site2.com', 'site3.com']
+// [ 'foobar.com', '//foo.com', 'http://bar.com' ]
 ```
 
 ### Filter Urls
