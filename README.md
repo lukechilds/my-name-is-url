@@ -45,7 +45,13 @@ import Urls from 'my-name-is-url';
 If you just wanna do your own thing the regex used internally is helpfully exposed
 
 ```js
-const UrlRegex = Urls.regex;
+var urlRegex = require('my-name-is-url').regex;
+```
+
+or
+
+```js
+import { regex as urlRegex } from 'my-name-is-url';
 ```
 
 ### Get Urls
