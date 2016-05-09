@@ -1,89 +1,49 @@
-var expect = require('chai').expect;
+import test from 'ava';
 
-var Urls = require('../dist/my-name-is-url');
-var Parser = require('../dist/parser');
-var regex = require('../dist/regex');
+import Urls from '../dist/my-name-is-url';
+import Parser from '../dist/parser';
+import regex from '../dist/regex';
 
-var grabbable = require('./grabbable.json');
-var matches = require('./matches.json');
-var nonMatches = require('./non-matches.json');
-function formatMatchDescription(match) {
-  var descriptionLength = 50;
-  var description = match.description;
-  if(description.length < descriptionLength) {
-    description += Array(descriptionLength - description.length + 1).join(' ');
-  }
-  description += '-> ' + match.url;
-  return description;
-}
+import grabbable from './fixtures/grabbable.json';
+import matches from './fixtures/matches.json';
+import nonMatches from './fixtures/non-matches.json';
 
-describe('Urls()', function() {
+test('Urls() should return instance of parser', t => {
+  t.true(Urls() instanceof Parser);
+});
 
-  it('Should return instance of parser', function () {
-    expect(Urls()).to.be.an.instanceof(Parser);
-  });
+test('Urls() should expose regex as property', t => {
+  t.is(Urls.regex, regex);
+});
 
-  it('Should expose regex as property', function () {
-    expect(Urls.regex).to.equal(regex);
-  });
+test('.get() should always return an array', t => {
+  t.true(Urls().get() instanceof Array);
+  t.true(Urls('').get() instanceof Array);
+  t.true(Urls('no url').get() instanceof Array);
+  t.true(Urls('url.com').get() instanceof Array);
+});
 
-  describe('.get()', function() {
+test('.get() should match a url', t => {
+  t.deepEqual(Urls('url.com').get(), ['url.com']);
+});
 
-    it('Should always return an array', function () {
-      expect(Urls().get()).to.be.instanceof(Array);
-      expect(Urls('').get()).to.be.instanceof(Array);
-      expect(Urls('no url').get()).to.be.instanceof(Array);
-      expect(Urls('url.com').get()).to.be.instanceof(Array);
-    });
+test('.filter() should throw error if filter callback is invalid', t => {
+  t.throws(() => Urls().filter());
+});
 
-    it('Should match a url', function () {
-      expect(Urls('url.com').get()).to.deep.equal(['url.com']);
-    });
+test('.filter() should filter matching urls', t => {
+  const filteredUrl = Urls('hello url.com world').filter(url => `<url>${url}</url>`);
+  t.is(filteredUrl, 'hello <url>url.com</url> world');
+});
 
-  });
+grabbable.forEach(grab => {
+  test(grab.description, t => t.deepEqual(Urls(grab.text).get(), grab.matches));
+});
 
-  describe('.filter()', function() {
+matches.forEach(match => {
+  test(match.description, t => t.deepEqual(Urls(match.url).get(), [match.url]));
+});
 
-    it('Should throw error if filter callback is invalid', function () {
-      expect(function() { Urls().filter() }).to.throw(Error);
-    });
-
-    it('Should filter matching urls', function () {
-      expect(Urls('hello url.com world').filter(function(url) {
-        return '<url>' + url + '</url>';
-      })).to.equal('hello <url>url.com</url> world');
-    });
-
-  });
-
-  describe('Should grab', function() {
-
-    grabbable.forEach(function(grab) {
-      it(grab.description, function () {
-        expect(Urls(grab.text).get()).to.deep.equal(grab.matches);
-      });
-    });
-
-  });
-
-  describe('Should match', function() {
-
-    matches.forEach(function(match) {
-      it(formatMatchDescription(match), function () {
-        expect(Urls(match.url).get()).to.deep.equal([match.url]);
-      });
-    });
-
-  });
-
-  describe('Should not match', function() {
-
-    nonMatches.forEach(function(nonMatch) {
-      it(formatMatchDescription(nonMatch), function () {
-        expect(Urls(nonMatch.url).get()).to.deep.equal([]);
-      });
-    });
-
-  });
-
+nonMatches.forEach(nonMatch => {
+  test(nonMatch.description, t => t.deepEqual(Urls(nonMatch.url).get(), []));
 });
