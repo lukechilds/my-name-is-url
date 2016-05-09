@@ -37,13 +37,13 @@ test('.filter() should filter matching urls', t => {
 });
 
 grabbable.forEach(grab => {
-  test(grab.description, t => t.deepEqual(Urls(grab.text).get(), grab.matches));
+  test(`Grabbable: ${grab.description}`, t => t.deepEqual(Urls(grab.text).get(), grab.matches));
 });
 
 matches.forEach(match => {
-  test(match.description, t => t.deepEqual(Urls(match.url).get(), [match.url]));
+  test(`Match: ${match.description}`, t => t.deepEqual(Urls(match.url).get(), [match.url]));
 });
 
 nonMatches.forEach(nonMatch => {
-  test(nonMatch.description, t => t.deepEqual(Urls(nonMatch.url).get(), []));
+  test(`Non Match: ${nonMatch.description}`, t => t.deepEqual(Urls(nonMatch.url).get(), []));
 });
