@@ -21,7 +21,7 @@ npm install --save my-name-is-url
 or
 
 ```shell
-jspm install npm:my-name-is-url
+jspm install my-name-is-url
 ```
 
 ## Usage
