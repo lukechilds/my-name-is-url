@@ -54,7 +54,7 @@ import Urls from 'my-name-is-url';
 
 ### Regex
 
-If you just wanna do your own thing the regex used internally is helpfully exposed
+If you just wanna do your own thing the regex used internally is helpfully exposed.
 
 ```js
 var urlRegex = require('my-name-is-url').regex;
