@@ -26,6 +26,18 @@ jspm install my-name-is-url
 
 ## Usage
 
+```js
+import Urls from 'my-name-is-url';
+
+const getText = 'Check out these sites: foobar.com,//foo.ninja,http://bar.com.';
+Urls(getText).get();
+// [ 'foobar.com', '//foo.ninja', 'http://bar.com' ]
+
+const filterText = 'My GitHub profile: https://github.com/lukechilds';
+Urls(filterText).filter(url => `<a href="${url}">${url}</a>`);
+// 'My GitHub profile: <a href="https://github.com/lukechilds">https://github.com/lukechilds</a>'
+```
+
 ### Importing
 
 CommonJS
@@ -54,20 +66,32 @@ or
 import { regex as urlRegex } from 'my-name-is-url';
 ```
 
-### Get Urls
+## API
 
-The `get()` method returns an array of urls in a string
+### regex
+
+The regex used internally for matching urls.
+
+### get()
+
+Returns an array of url matches. If there are no matches an empty array will be returned.
 
 ```js
-const text = 'Check out these sites: foobar.com,//foo.com,http://bar.com.';
+const text = 'Check out these sites: foobar.com,//foo.ninja,http://bar.com.';
 
 Urls(text).get();
-// [ 'foobar.com', '//foo.com', 'http://bar.com' ]
+// [ 'foobar.com', '//foo.ninja', 'http://bar.com' ]
 ```
 
-### Filter Urls
+### filter(cb)
 
-The `filter()` method runs a filter on each url in a string
+Runs a filter callback on each url in a string.
+
+#### cb
+
+*Required*
+
+Type: `function`
 
 ```js
 const text = 'My GitHub profile: https://github.com/lukechilds';
