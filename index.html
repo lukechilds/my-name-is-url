@@ -22,9 +22,8 @@
         <h1>my-name-is-url</h1>
 
         <h2>About</h2>
-        <p>In a nutshell, my-name-is-url is an intelligent parser that searches a string of text for urls.</p>
-        <p>The url spec is so vague that many strings <i>could</i> be a url so matching the spec directly results in a lot of false positives.</p>
-        <p>The regular expression used in my-name-is-url tries to match patterns likely to represent a url in a sentence rather than matching the actual url spec.</p>
+        <p>my-name-is-url was created because I couldn't find a parser with a high enough success rate. The url spec is so vague that many strings <i>could</i> be a url, therefore matching the spec directly results in a lot of false positives. Most parsers get around this by requiring a url to contain a scheme to be matched as a url.</p>
+        <p>The regular expression used in my-name-is-url tries to match patterns likely to represent a url in a sentence rather than matching the actual url spec. This results in a much wider scope of matchable urls than most other parsers without introducing loads of false positives.</p>
 
         <h2>Bugs</h2>
         <p>If you spot anything odd it would be awesome if you could <a target="_blank" href="https://github.com/lukechilds/my-name-is-url/issues/new">submit an issue on Github</a> with your unique url and a description of what's wrong. Thanks :)</p>
