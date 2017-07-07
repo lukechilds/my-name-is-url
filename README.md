@@ -1,7 +1,5 @@
 # my-name-is-url [![Build Status](https://travis-ci.org/lukechilds/my-name-is-url.svg?branch=master)](https://travis-ci.org/lukechilds/my-name-is-url) [![Coverage Status](https://coveralls.io/repos/github/lukechilds/my-name-is-url/badge.svg?branch=master)](https://coveralls.io/github/lukechilds/my-name-is-url?branch=master)
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/lukechilds/my-name-is-url.svg)](https://greenkeeper.io/)
-
 Intelligently recognises many different url formats in a string. For the browser and node. [Here, have a play](http://lukechilds.github.io/my-name-is-url).
 
 ## About
