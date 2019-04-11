@@ -138,5 +138,9 @@
   {
     "description": "Url with url encoded string",
     "url": "url.com/Test+url+encoding+with+symbols+!%40£%24%25^%26*()_%2B"
+  },
+  {
+    "description": "Url with extension",
+    "url": "url.com/foo.bar"
   }
 ]
